@@ -1,4 +1,4 @@
-# SuperSU
+# Supersu support
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/du/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+    vendor/hybrid/prebuilt/common/bin/suinstaller.sh:system/bin/suinstaller.sh \
+    vendor/hybrid/prebuilt/common/supersu.zip:system/supersu.zip
