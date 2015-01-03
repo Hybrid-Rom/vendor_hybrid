@@ -25,28 +25,33 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aod/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/aod/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/aod/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
-    vendor/aod/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/hybrid/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/hybrid/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/hybrid/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/hybrid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aod/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aod/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/hybrid/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/hybrid/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/aod/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/hybrid/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # vendor-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/aod/prebuilt/common/etc/init.local.rc:root/init.vendor.rc
+    vendor/hybrid/prebuilt/common/etc/init.local.rc:root/init.vendor.rc
+
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/hybrid/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/hybrid/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/aod/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/aod/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+    vendor/hybrid/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/hybrid/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -61,12 +66,15 @@ PRODUCT_PACKAGES += \
     Development \
     LatinIME \
     Launcher3 \
-    BluetoothExt
+    BluetoothExt \
+    AudioFX \
+    
 
 # Optional packages
 PRODUCT_PACKAGES += \
     libemoji \
-    SoundRecorder
+    SoundRecorder \
+    Eleven \
 
 # Telephony packages
 PRODUCT_PACKAGES += \
@@ -77,19 +85,19 @@ PRODUCT_PACKAGES += \
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    vendor/aod/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/hybrid/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # World SPN overrides list
 PRODUCT_COPY_FILES += \
-    vendor/aod/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
+    vendor/hybrid/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
 # Selective SPN list for operator number who has the problem.
 PRODUCT_COPY_FILES += \
-    vendor/aod/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+    vendor/hybrid/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/aod/overlay/common \
-    vendor/aod/overlay/dictionaries
+    vendor/hybrid/overlay/common \
+    vendor/hybrid/overlay/dictionaries
 
 
 # by default, do not update the recovery with system updates
