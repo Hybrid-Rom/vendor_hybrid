@@ -67,7 +67,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3 \
     BluetoothExt \
-    AudioFX \
     
 
 # Optional packages
