@@ -73,7 +73,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libemoji \
     SoundRecorder \
-    Eleven \
+    Apollo \
+    MusicFX
 
 # Telephony packages
 PRODUCT_PACKAGES += \
