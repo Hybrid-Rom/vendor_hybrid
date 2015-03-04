@@ -12,7 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Default notification tone
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.notification_sound=Attention.ogg
+    ro.config.notification_sound=Procyon.ogg
 
 # Default alarm alert
 PRODUCT_PROPERTY_OVERRIDES += \
