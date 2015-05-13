@@ -30,7 +30,7 @@ ifneq ($(filter pa_nozomi pa_falcon pa_peregrine pa_ghost pa_tomato pa_armani pa
 endif
 
 # PA HDPI Devices
-ifneq ($(filter pa_condor pa_p3100 pa_p3110 pa_taoshan,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_condor pa_p3100 pa_p3110 pa_ls970 pa_taoshan,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/800x480.zip:system/media/bootanimation.zip
 endif
